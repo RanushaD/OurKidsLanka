@@ -2,6 +2,7 @@ import React from 'react';
 import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import pageHead from '../assets/pageHeader.jpg';
+import Image from 'react-bootstrap/Image'
 
 const Styles = styled.div`
     .jumbo {
@@ -12,7 +13,6 @@ const Styles = styled.div`
         position: relative;
         z-index: -2;
     }
-
     .overlay{
         background-color: #000;
         opacity: 0.6;
