@@ -5,12 +5,13 @@ import styled from 'styled-components';
 const Styles = styled.div`
     .navbar {
         overflow: hidden;
-        backgroud-color: #f1f1f1;
+        background-color: #f1f1f1;
         padding: 40px 80px;
         transition: 0.4s;
         position: fixed;
         width: 100%
         top: 0;
+        
         z-index: 99;
     }
     .smaller {
@@ -96,7 +97,7 @@ export const NavigationBar = () => (
 function resizeHeaderOnScroll() {
     const distanceY = window.pageYOffset  || 
     document.documentElement.scrollTop, 
-    shrinkOn =200,       
+    shrinkOn =100,       
     headerEL = document.getElementById('header');
     if (distanceY > shrinkOn) {
         headerEL.classList.add("smaller");

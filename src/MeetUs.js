@@ -1,89 +1,148 @@
 import React from 'react';
-import { Layout } from './components/Layout';
+import {MDBMask, MDBView, MDBContainer, MDBRow, MDBCol} from "mdbreact";
 import styled from 'styled-components';
 import tempAvatar from './assets/avatar_img.png';
-import {Image} from 'react-bootstrap';
+import {Image, Button} from 'react-bootstrap';
+import 'mdbreact/dist/css/mdb.css';
+import { Layout } from './components/Layout';
 
 const Styles = styled.div`
-
-    .layout{
-        position: relative;
-        width: 50%;
-    }
-    .image{
-        opacity: 1;
-        display: block;
+    .image-fluid{
         width: 100%;
         height: auto;
-        transition: .5s ease;
-        backface-visibility: hidden;
-        &: hover{
-            opacity: 0.3;
+    }
+    .flex-center{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+    }
+    .col{
+        position: relative;
+        width: 100%;
+        padding-bottom: 60px;
+        padding-right: 40px;
+    }
+    .view {
+        width: 100%;
+        margin-left: 90px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .white-text{
+        text-align:center;
+        white-space: pre-line;
+    }
+    .morebutton{
+        border-radius: 20px;
+        background: #ffbb33;
+        font-size: 12px;
+        &:hover{
+            background: #f1f1f1;
+            color: black;
         }
     }
-    .middle{
-        transition: .5s ease;
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        text-align: center;
-        &: hover{
-            opacity: 1;
+
+    @media screen and (max-width: 800px) {
+        .col{
+            flex: 100%;
+            max-width: 100%
+            align-items: center;
+            margin-right: 120px;
         }
     }
-    .summary {
-        background-color: #4CAF50;
-        color: white;
-        font-size: 16px;
-        padding: 16px 32px; 
-    }
+
 `;
+
+const sumup = ['Full Name', 'Age:___', 'Grade:___', '"Quote they said"', 'Something they love to do']
 
 
 export const MeetUs = () => (
     <Styles>
         <Layout>
-            <div className="row">
-                <div className="column">
-                    <img className='image' src={tempAvatar} />
-                            <div className="summary">
-                                Full Name
-                                Age: _____
-                                Grade: _____
-                                "Quote the they said"
-                                Something they love to do
-                                Learn more about first name
-                            </div>
-                        </div>
-                        <img className='image' src={tempAvatar} />
-                            <div className="middle">
-                                <div className="summary">
-                                    Full Name
-                                    Age: _____
-                                    Grade: _____
-                                    "Quote the they said"
-                                    Something they love to do
-                                    Learn more about first name
-                                </div>
-                            </div>
-                        <img className='image' src={tempAvatar} />
-                            <div className="middle">
-                                <div className="summary">
-                                    Full Name
-                                    Age: _____
-                                    Grade: _____
-                                    "Quote the they said"
-                                    Something they love to do
-                                    Learn more about first name
-                                </div>
-                            </div>
-
-                </div>
-            </div>
-
+            <MDBContainer className="mt-5">
+                <MDBRow>
+                    <MDBCol className="col" md="5">
+                        <MDBView hover zoom className="view">
+                            <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
+                            <MDBMask className="flex-center" overlay="cyan-light">
+                                <p className="white-text">
+                                    {sumup.join('\n')}
+                                    <p>
+                                        <Button className = "morebutton" variant="warning">Learn More About NAME</Button>
+                                    </p>                                
+                                </p>
+                            </MDBMask>
+                        </MDBView>
+                    </MDBCol>
+                    <MDBCol className="col" md="5">
+                        <MDBView hover zoom className="view">
+                            <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
+                            <MDBMask className="flex-center" overlay="cyan-light">
+                                <p className="white-text">
+                                    {sumup.join('\n')}
+                                    <p>
+                                        <Button className = "morebutton" variant="warning">Learn More About NAME</Button>
+                                    </p>
+                                </p>
+                            </MDBMask>
+                        </MDBView>
+                    </MDBCol>                
+                    <MDBCol className="col" md="5">
+                        <MDBView hover zoom className="view">
+                            <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
+                            <MDBMask className="flex-center" overlay="cyan-light">
+                                <p className="white-text">
+                                    {sumup.join('\n')}
+                                    <p>
+                                        <Button className = "morebutton" variant="warning">Learn More About NAME</Button>
+                                    </p>                                
+                                </p>
+                            </MDBMask>
+                        </MDBView>
+                    </MDBCol>
+                    <MDBCol className="col" md="5">
+                        <MDBView hover zoom className="view">
+                            <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
+                            <MDBMask className="flex-center" overlay="cyan-light">
+                                <p className="white-text">
+                                    {sumup.join('\n')}
+                                    <p>
+                                        <Button className = "morebutton" variant="warning">Learn More About NAME</Button>
+                                    </p>                               
+                                </p>
+                            </MDBMask>
+                        </MDBView>
+                    </MDBCol>
+                    <MDBCol className="col" md="5">
+                        <MDBView hover zoom className="view">
+                            <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
+                            <MDBMask className="flex-center" overlay="cyan-light">
+                                <p className="white-text">
+                                    {sumup.join('\n')}
+                                    <p>
+                                        <Button className = "morebutton" variant="warning">Learn More About NAME</Button>
+                                    </p>                                
+                                </p>
+                            </MDBMask>
+                        </MDBView>
+                    </MDBCol>
+                    <MDBCol className="col" md="5">
+                        <MDBView hover zoom className="view">
+                            <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
+                            <MDBMask className="flex-center" overlay="cyan-light">
+                                <p className="white-text">
+                                    {sumup.join('\n')}
+                                    <p>
+                                        <Button className = "morebutton" variant="warning">Learn More About NAME</Button>
+                                    </p>                               
+                                </p>
+                            </MDBMask>
+                        </MDBView>
+                    </MDBCol>
+                </MDBRow>
+            </MDBContainer>
         </Layout>
     </Styles>
 )
