@@ -6,12 +6,11 @@ const Styles = styled.div`
     .navbar {
         overflow: hidden;
         background-color: #f1f1f1;
-        padding: 40px 80px;
+        padding: 30px 80px;
         transition: 0.4s;
         position: fixed;
         width: 100%
-        top: 0;
-        
+        top: 10;
         z-index: 99;
     }
     .smaller {
@@ -32,6 +31,7 @@ const Styles = styled.div`
         font-size: 55px;
         font-weight: bold;
         transition: 0.4s;
+        padding-top: 20px;
 
     }
 
