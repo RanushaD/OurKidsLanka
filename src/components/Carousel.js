@@ -15,7 +15,7 @@ const Styles = styled.div`
     .carousel .carousel-caption{
         position: absolute;
         padding-bottom: 100px;
-        color: yellow;
+        color: white;
     }
 
 

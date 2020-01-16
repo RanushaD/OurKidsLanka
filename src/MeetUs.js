@@ -21,7 +21,7 @@ const Styles = styled.div`
     .col{
         position: relative;
         width: 100%;
-        margin-left: 60;
+        padding-bottom: 30px;        
     }
     .view {
         width: 100%;
@@ -47,7 +47,6 @@ const Styles = styled.div`
         .col{
             max-width: 780px;
             align-items: center;
-            margin-right: 100px;
             
         }
     }

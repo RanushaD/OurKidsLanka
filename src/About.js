@@ -23,23 +23,11 @@ const Styles = styled.div `
         flex-wrap: wrap;
         align-items: center;
         font-size: 3vw;
-        position: relative;
-
+        position: absolute;
     }
 
     .text-center{
         font-size: 5vw;
-    }
-
-    .video-caption{
-        font-size: 4vw;
-        position: relative;
-        display: inline-block;
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translate(-50%,-50%);
-        transform: translate(-50%, -50%);
-        
     }
 
     .container{

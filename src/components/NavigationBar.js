@@ -77,7 +77,7 @@ const Styles = styled.div`
     }
 `;
 
-export const NavigationBar = () => (
+export const NavigationBar = (props) => (
     <Styles>
         <Navbar id = "header" expand ="lg">
             <Navbar.Brand href="/">Code Life</Navbar.Brand>
@@ -88,6 +88,14 @@ export const NavigationBar = () => (
                     <Nav.Item><Nav.Link href="/meetus">Meet Our Kids</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/about">About</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/contact">Contact Us</Nav.Link></Nav.Item>
+                    {
+                        props.isAuthenticated ?
+                        <Nav.Item>Login</Nav.Item>
+                        :
+                        <Nav.Item><Nav.Link href="/login">Login</Nav.Link></Nav.Item>
+
+                    }
+                    <Nav.Item><Nav.Link href="/signup">Sign Up</Nav.Link></Nav.Item>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
