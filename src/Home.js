@@ -23,6 +23,9 @@ const Styles = styled.div `
         align-items: center;
     }
     img{
+        diplay: block;
+        margin-left: auto;
+        margin-right: auto;
         border-radius: 50%;
         max-width: 100%;
         max-height: 100%;
@@ -40,9 +43,10 @@ const Styles = styled.div `
             transition: 0.4s;
         }
     }
-    @media screen and (max-width: 750px){
+    @media screen and (max-width: 700px){
         .col{
             flex-basis: auto;
+
         }
     }
 
@@ -52,28 +56,22 @@ export const Home = () => (
         <Slideshow/>
         <Styles>
             <div class="d-flex justify-content-center">
-                <MDBRow>
-                    <MDBCol className="col">
-                        <MDBView className="view">
-                            <img src={icons} alt="Icon1"></img>
-                        </MDBView>
-                    </MDBCol>
-                    <MDBCol className="col">
-                        <MDBView className="view">
-                            <img src={icons} alt="Icon2"></img>
-                        </MDBView>
-                    </MDBCol>
-                    <MDBCol className="col">
-                        <MDBView className="view">
-                            <img src={icons} alt="Icon3"></img>
-                        </MDBView>
-                    </MDBCol>
-
-                </MDBRow>
-
+                <MDBCol className="col">
+                    <MDBView className="view">
+                        <img src={icons} alt="Icon1"></img>
+                    </MDBView>
+                </MDBCol>
+                <MDBCol className="col">
+                    <MDBView className="view">
+                        <img src={icons} alt="Icon2"></img>
+                    </MDBView>
+                </MDBCol>
+                <MDBCol className="col">
+                    <MDBView className="view">
+                        <img src={icons} alt="Icon3"></img>
+                    </MDBView>
+                </MDBCol>
             </div>
-        </Styles>
-        <Styles>
             <div class="animated fadeInUp">
                 <h2 className ="home-header">Home Page</h2>
             </div>

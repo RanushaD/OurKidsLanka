@@ -6,9 +6,8 @@ const Styles = styled.div`
     .navbar {
         overflow: hidden;
         background-color: #f1f1f1;
-        padding: 20px 80px;
         position: fixed;
-        width: 100%
+        width: 100%;
         top: 10;
         z-index: 99;
     }
