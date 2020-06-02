@@ -93,10 +93,12 @@ export const authSignup = (username, email, password1, password2) => {
 
 export const authCheckState = () => {
     return dispatch => {
+        // check if the token is stored in local storage 
         const token = localStorage.getItem('token');
         if (token == undefined) {
             dispatch(logout());
         } else {
+            // create expiration date
             const expirationDate = new Date(localStorage.getItem('expirationDate'));
             if ( expirationDate <= new Date()) {
                 dispatch(logout);

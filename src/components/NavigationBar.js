@@ -6,56 +6,37 @@ const Styles = styled.div`
     .navbar {
         overflow: hidden;
         background-color: #f1f1f1;
-        padding: 30px 80px;
-        transition: 0.4s;
+        padding: 20px 80px;
         position: fixed;
         width: 100%
         top: 10;
         z-index: 99;
     }
     .smaller {
-        padding-top: 0px;
+        padding: 0px;
         transition: 0.4s;
     }
 
     .smaller .navbar-brand{
         line-height: 55px;
-        font-size: 35px;
+        font-size: 25px;
+        text-align: center;
         transition: 0.4s;
-        margin: 0;
         width: 150px;
         height: 75px;
     }
 
     .navbar-brand{
-        font-size: 55px;
+        font-size: 30px;
         font-weight: bold;
         transition: 0.4s;
-        padding-top: 20px;
 
-    }
-
-    .smaller .navbar-nav .nav-link {
-        float: left;
-        color: red;
-        text-align: center;
-        padding: 12px;
-        transition: 0.4s;
-        text-decoration: none;
-        font-size: 15px;
-        line-height: 35px;
-        border-radius: 4px;
-        &:hover {
-            color: yellow;
-        }
     }
 
     .navbar-nav .nav-link {
         float: left;
-        color: red;
+        background-color: #f1f1f1;
         text-align: center;
-        padding: 12px;
-        transition: 0.4s;
         text-decoration: none;
         font-size: 18px;
         line-height: 25px;
@@ -64,14 +45,22 @@ const Styles = styled.div`
             color: yellow;
         }
     }
-    @media screen and (max-width: 580px) {
-        .navbar{
-            padding: 20px 10px !important;
+
+    .smaller .navbar-nav .nav-link {
+        text-align: center;
+        transition: 0.4s;
+        text-decoration: none;
+        font-size: 15px;
+        &:hover {
+            color: yellow;
         }
+    }
+
+    @media screen and (max-width: 992px) {
         .navbar-nav .nav-link {
             float: none;
             display: block;
-            text-alighn:left;
+            text-align: center;
         }
 
     }
@@ -90,7 +79,7 @@ export const NavigationBar = (props) => (
                     <Nav.Item><Nav.Link href="/contact">Contact Us</Nav.Link></Nav.Item>
                     {
                         props.isAuthenticated ?
-                        <Nav.Item>Login</Nav.Item>
+                        <Nav.Item>Logout</Nav.Item>
                         :
                         <Nav.Item><Nav.Link href="/login">Login</Nav.Link></Nav.Item>
 
@@ -105,7 +94,7 @@ export const NavigationBar = (props) => (
 function resizeHeaderOnScroll() {
     const distanceY = window.pageYOffset  || 
     document.documentElement.scrollTop, 
-    shrinkOn =100,       
+    shrinkOn =1,       
     headerEL = document.getElementById('header');
     if (distanceY > shrinkOn) {
         headerEL.classList.add("smaller");

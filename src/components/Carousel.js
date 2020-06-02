@@ -7,6 +7,7 @@ import pageHead from '../assets/pageHeader.jpg';
 const Styles = styled.div`
     .slidepics{
         background-size: cover;
+        padding-top: 70px;
         position: relative;
         height:100%;
         width:100%;
@@ -14,7 +15,8 @@ const Styles = styled.div`
     }
     .carousel .carousel-caption{
         position: absolute;
-        padding-bottom: 100px;
+        padding: 1rem
+        padding-bottom: 25%;
         color: white;
     }
 

@@ -7,6 +7,11 @@ import 'mdbreact/dist/css/mdb.css';
 import { Layout } from './components/Layout';
 
 const Styles = styled.div`
+    .container{
+        padding-top: 300px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
 
     .image-fluid{
         width: 100%;
@@ -58,93 +63,91 @@ const sumup = ['Full Name', 'Age:___', 'Grade:___', '"Quote they said"', 'Someth
 
 export const MeetUs = () => (
     <Styles>
-        <Layout>
-            <MDBContainer className="container">
-                <MDBRow>
-                    <MDBCol className="col">
-                        <MDBView hover zoom className="view">
-                            <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
-                            <MDBMask className="flex-center" overlay="cyan-light">
-                                <p className="white-text">
-                                    {sumup.join('\n')}
-                                    <p>
-                                        <Button className = "morebutton" variant="warning">Meet NAME</Button>
-                                    </p>                                
+        <MDBContainer className="container">
+            <MDBRow>
+                <MDBCol className="col">
+                    <MDBView hover zoom className="view">
+                        <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
+                        <MDBMask className="flex-center" overlay="cyan-light">
+                            <p className="white-text">
+                                {sumup.join('\n')}
+                                <p>
+                                    <Button className = "morebutton" variant="warning">Meet NAME</Button>
+                                </p>                                
+                            </p>
+                        </MDBMask>
+                    </MDBView>
+                </MDBCol>
+                <MDBCol className="col">
+                    <MDBView hover zoom className="view">
+                        <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
+                        <MDBMask className="flex-center" overlay="cyan-light">
+                            <p className="white-text">
+                                {sumup.join('\n')}
+                                <p>
+                                    <Button className = "morebutton" variant="warning">Meet NAME</Button>
                                 </p>
-                            </MDBMask>
-                        </MDBView>
-                    </MDBCol>
-                    <MDBCol className="col">
-                        <MDBView hover zoom className="view">
-                            <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
-                            <MDBMask className="flex-center" overlay="cyan-light">
-                                <p className="white-text">
-                                    {sumup.join('\n')}
-                                    <p>
-                                        <Button className = "morebutton" variant="warning">Meet NAME</Button>
-                                    </p>
-                                </p>
-                            </MDBMask>
-                        </MDBView>
-                    </MDBCol>   
-                </MDBRow>
-                <MDBRow>          
-                    <MDBCol className="col">
-                        <MDBView hover zoom className="view">
-                            <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
-                            <MDBMask className="flex-center" overlay="cyan-light">
-                                <p className="white-text">
-                                    {sumup.join('\n')}
-                                    <p>
-                                        <Button className = "morebutton" variant="warning">Meet NAME</Button>
-                                    </p>                                
-                                </p>
-                            </MDBMask>
-                        </MDBView>
-                    </MDBCol>
-                    <MDBCol className="col">
-                        <MDBView hover zoom className="view">
-                            <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
-                            <MDBMask className="flex-center" overlay="cyan-light">
-                                <p className="white-text">
-                                    {sumup.join('\n')}
-                                    <p>
-                                        <Button className = "morebutton" variant="warning">Meet NAME</Button>
-                                    </p>                               
-                                </p>
-                            </MDBMask>
-                        </MDBView>
-                    </MDBCol>
-                </MDBRow>
-                <MDBRow>
-                    <MDBCol className="col">
-                        <MDBView hover zoom className="view">
-                            <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
-                            <MDBMask className="flex-center" overlay="cyan-light">
-                                <p className="white-text">
-                                    {sumup.join('\n')}
-                                    <p>
-                                        <Button className = "morebutton" variant="warning">Meet NAME</Button>
-                                    </p>                                
-                                </p>
-                            </MDBMask>
-                        </MDBView>
-                    </MDBCol>
-                    <MDBCol className="col">
-                        <MDBView hover zoom className="view">
-                            <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
-                            <MDBMask className="flex-center" overlay="cyan-light">
-                                <p className="white-text">
-                                    {sumup.join('\n')}
-                                    <p>
-                                        <Button className = "morebutton" variant="warning">Meet NAME</Button>
-                                    </p>                               
-                                </p>
-                            </MDBMask>
-                        </MDBView>
-                    </MDBCol>
-                </MDBRow>
-            </MDBContainer>
-        </Layout>
+                            </p>
+                        </MDBMask>
+                    </MDBView>
+                </MDBCol>   
+            </MDBRow>
+            <MDBRow>          
+                <MDBCol className="col">
+                    <MDBView hover zoom className="view">
+                        <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
+                        <MDBMask className="flex-center" overlay="cyan-light">
+                            <p className="white-text">
+                                {sumup.join('\n')}
+                                <p>
+                                    <Button className = "morebutton" variant="warning">Meet NAME</Button>
+                                </p>                                
+                            </p>
+                        </MDBMask>
+                    </MDBView>
+                </MDBCol>
+                <MDBCol className="col">
+                    <MDBView hover zoom className="view">
+                        <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
+                        <MDBMask className="flex-center" overlay="cyan-light">
+                            <p className="white-text">
+                                {sumup.join('\n')}
+                                <p>
+                                    <Button className = "morebutton" variant="warning">Meet NAME</Button>
+                                </p>                               
+                            </p>
+                        </MDBMask>
+                    </MDBView>
+                </MDBCol>
+            </MDBRow>
+            <MDBRow>
+                <MDBCol className="col">
+                    <MDBView hover zoom className="view">
+                        <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
+                        <MDBMask className="flex-center" overlay="cyan-light">
+                            <p className="white-text">
+                                {sumup.join('\n')}
+                                <p>
+                                    <Button className = "morebutton" variant="warning">Meet NAME</Button>
+                                </p>                                
+                            </p>
+                        </MDBMask>
+                    </MDBView>
+                </MDBCol>
+                <MDBCol className="col">
+                    <MDBView hover zoom className="view">
+                        <Image className='image-fluid' src={tempAvatar} alt="" fluid/>
+                        <MDBMask className="flex-center" overlay="cyan-light">
+                            <p className="white-text">
+                                {sumup.join('\n')}
+                                <p>
+                                    <Button className = "morebutton" variant="warning">Meet NAME</Button>
+                                </p>                               
+                            </p>
+                        </MDBMask>
+                    </MDBView>
+                </MDBCol>
+            </MDBRow>
+        </MDBContainer>
     </Styles>
 )

@@ -12,8 +12,6 @@ const Styles = styled.div`
 
 export const Layout = (props) => (
     <Styles>
-        <Container>
-                {props.children}
-        </Container>
+        {props.children}
     </Styles>
 )

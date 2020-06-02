@@ -74,12 +74,6 @@ export const About = () => (
                 <p className="white-text">With HTML5 Video and Bootstrap 4</p>
             </MDBMask>
         </MDBView>
-        <Layout>
-        <h2> About Page </h2>
-        <p> Stare at bkdjkfjkajkdgkdfkgsdkgjk</p>
-        <p> Stare at bkdjkfjkajkdgkdfkgsdkgjk</p>
-        <p> Stare at bkdjkfjkajkdgkdfkgsdkgjk</p>
-        </Layout>
         <MDBContainer className="container">
             <MDBRow className="row">
                 <MDBCol className="mt-4">
