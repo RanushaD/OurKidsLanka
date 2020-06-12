@@ -4,6 +4,7 @@ import {Figure} from 'react-bootstrap';
 import styled from 'styled-components';
 import pageHead2 from '../src/assets/pageHeader2.jpg';
 import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol} from 'mdbreact';
+import { FooterPage } from './components/Footer'; 
 
 const Styles = styled.div `
     .header{
@@ -54,7 +55,7 @@ const Styles = styled.div `
         }
 
     .row{
-        display: flew;
+        display: flex;
         flex-wrap: wrap;
         margin-right: -15px;
         margin-left: -15px;
@@ -85,6 +86,7 @@ export const About = () => (
             </MDBRow>
 
         </MDBContainer>
+        <FooterPage/>
     </Styles>
     
 )

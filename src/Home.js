@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import icon from './assets/orange.png';
 import { Slideshow } from './components/Carousel';
+import { FooterPage } from './components/Footer';
 import { Layout } from './components/Layout';
 import {MDBMask, MDBView, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody} from "mdbreact";
 import AOS from 'aos';
@@ -160,6 +161,11 @@ const Styles = styled.div `
         align-items: center;
     }
 
+    .donate-btn{
+        margin-top: 40px;
+
+    }
+
     .donate-image{
         width: 50%;
         display: block;
@@ -179,9 +185,20 @@ const Styles = styled.div `
             transition: 0.4s;
         }
     }
-    @media screen and (max-width: 700px){
+    @media screen and (max-width: 800px){
         .col{
             flex-basis: auto;
+        }
+        .col-cascade{
+            flex-basis: auto;
+            max-width: 100%;
+        }
+        .twoThirds{
+            width: auto;
+        }
+        .oneThird{
+            width: auto;
+            padding: 3rem;
         }
     }
 
@@ -264,6 +281,29 @@ export const Home = () => (
                             </div>     
                         </div>
                    </div>
+
+                    <div class="banner" data-aos="zoom-in" data-aos-duration="1200">
+                    <Row>
+                            <div class= "inner">  
+                                <div class ="twoThirds">
+                                    <div class="text">
+                                        <h3> Make a donation to support the many kids that need your help. Your Donation will give them a fraction of the opportunities you and I have everyday!</h3>
+                                    </div>
+                                    <div class="donate-btn">
+                                        <Button variant="success" size="lg">DONATE</Button>
+                                    </div>
+                                </div>
+                                <div class="oneThird">
+                                    <div class="donate-image">
+                                        <Image src={icon} roundedCircle fluid/>
+                                    </div>
+                                </div>
+                            </div>
+                        </Row>
+                    </div>
+
+
+
                    <div class = "d-flex flex-wrap" translate="no" data-aos-easing="ease" data-aos-duration="7000" data-aos-delay="0">
                      <div class="col-cascade">
                             <div class="cardfadeIn" data-aos="fade-right" data-aos-duration="7000">
@@ -311,25 +351,8 @@ export const Home = () => (
                         </div>
                    </div>
             </div>
-
-            <Row>
-                <div class= "inner">  
-                    <div class ="twoThirds">
-                        <div class="text">
-                            <h3> Make a donation to support the many kids that need your help. Your Donation will give them a fraction of the opportunities you and I have everyday!</h3>
-                        </div>
-                        <div class="donate-btn">
-                            <Button variant="success" size="lg">DONATE</Button>
-                        </div>
-                    </div>
-                    <div class="oneThird">
-                        <div class="donate-image">
-                            <Image src={icon} roundedCircle fluid/>
-                        </div>
-                    </div>
-                </div>
-            </Row>
         </Styles>
+        <FooterPage/>
     </div>
 )
 AOS.init();

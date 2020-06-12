@@ -5,10 +5,10 @@ import tempAvatar from './assets/avatar_img.png';
 import {Image, Button} from 'react-bootstrap';
 import 'mdbreact/dist/css/mdb.css';
 import { Layout } from './components/Layout';
+import { FooterPage} from './components/Footer';
 
 const Styles = styled.div`
     .container{
-        padding-top: 300px;
         padding-right: 50px;
         padding-left: 50px;
     }
@@ -72,7 +72,7 @@ export const MeetUs = () => (
                             <p className="white-text">
                                 {sumup.join('\n')}
                                 <p>
-                                    <Button className = "morebutton" variant="warning">Meet NAME</Button>
+                                    <Button className = "morebutton" variant="warning" href="/meetus/#!">Meet NAME</Button>
                                 </p>                                
                             </p>
                         </MDBMask>
@@ -85,7 +85,7 @@ export const MeetUs = () => (
                             <p className="white-text">
                                 {sumup.join('\n')}
                                 <p>
-                                    <Button className = "morebutton" variant="warning">Meet NAME</Button>
+                                    <Button className = "morebutton" variant="warning" href="/meetus/#!">Meet NAME</Button>
                                 </p>
                             </p>
                         </MDBMask>
@@ -100,7 +100,7 @@ export const MeetUs = () => (
                             <p className="white-text">
                                 {sumup.join('\n')}
                                 <p>
-                                    <Button className = "morebutton" variant="warning">Meet NAME</Button>
+                                    <Button className = "morebutton" variant="warning" href="/meetus/#!">Meet NAME</Button>
                                 </p>                                
                             </p>
                         </MDBMask>
@@ -113,7 +113,7 @@ export const MeetUs = () => (
                             <p className="white-text">
                                 {sumup.join('\n')}
                                 <p>
-                                    <Button className = "morebutton" variant="warning">Meet NAME</Button>
+                                    <Button className = "morebutton" variant="warning" href="/meetus/#!">Meet NAME</Button>
                                 </p>                               
                             </p>
                         </MDBMask>
@@ -128,7 +128,7 @@ export const MeetUs = () => (
                             <p className="white-text">
                                 {sumup.join('\n')}
                                 <p>
-                                    <Button className = "morebutton" variant="warning">Meet NAME</Button>
+                                    <Button className = "morebutton" variant="warning" href="/meetus/#!">Meet NAME</Button>
                                 </p>                                
                             </p>
                         </MDBMask>
@@ -141,7 +141,7 @@ export const MeetUs = () => (
                             <p className="white-text">
                                 {sumup.join('\n')}
                                 <p>
-                                    <Button className = "morebutton" variant="warning">Meet NAME</Button>
+                                    <Button className = "morebutton" variant="warning" href="/meetus/#!">Meet NAME</Button>
                                 </p>                               
                             </p>
                         </MDBMask>
@@ -149,5 +149,6 @@ export const MeetUs = () => (
                 </MDBCol>
             </MDBRow>
         </MDBContainer>
+        <FooterPage/>
     </Styles>
 )
